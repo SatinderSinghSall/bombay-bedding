@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 
   icons: {
     icon: [
-      { url: "/icon.jpeg", media: "(prefers-color-scheme: light)" },
-      { url: "/icon.jpeg", media: "(prefers-color-scheme: dark)" },
-      { url: "/icon.jpeg", type: "image/svg+xml" },
-      { url: "/icon.jpeg", type: "image/jpeg" }, // Added high-res JPEG icon fallback
+      { url: "/main-logo.jpeg", media: "(prefers-color-scheme: light)" },
+      { url: "/main-logo.jpeg", media: "(prefers-color-scheme: dark)" },
+      { url: "/main-logo.jpeg", type: "image/svg+xml" },
+      { url: "/main-logo.jpeg", type: "image/jpeg" }, // Added high-res JPEG icon fallback
     ],
-    apple: [{ url: "/icon.jpeg", sizes: "180x180", type: "image/png" }],
+    apple: [{ url: "/main-logo.jpeg", sizes: "180x180", type: "image/png" }],
   },
 
   keywords: [
