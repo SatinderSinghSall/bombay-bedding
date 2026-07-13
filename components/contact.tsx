@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { MessageCircle, Phone, Mail, Clock, ShieldCheck } from "lucide-react";
 
 export function Contact() {
@@ -31,20 +31,29 @@ export function Contact() {
     },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+      transition: {
+        staggerChildren: 0.12,
+        delayChildren: 0.1,
+      },
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+  const itemVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+    },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
     },
   };
 
