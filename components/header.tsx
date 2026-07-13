@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, type Variants } from "framer-motion";
 import {
   Menu,
   MessageCircle,
@@ -45,14 +45,13 @@ export function Header() {
     { label: "Contact", href: "#contact" },
   ];
 
-  const menuVariants = {
+  const menuVariants: Variants = {
     closed: {
       opacity: 0,
       y: -12,
       transition: {
         when: "afterChildren",
         staggerChildren: 0.03,
-        ease: [0.16, 1, 0.3, 1],
       },
     },
     open: {
@@ -61,14 +60,22 @@ export function Header() {
       transition: {
         when: "beforeChildren",
         staggerChildren: 0.05,
-        ease: [0.16, 1, 0.3, 1],
       },
     },
   };
 
-  const itemVariants = {
-    closed: { opacity: 0, x: -10 },
-    open: { opacity: 1, x: 0, transition: { duration: 0.35, ease: "easeOut" } },
+  const itemVariants: Variants = {
+    closed: {
+      opacity: 0,
+      x: -10,
+    },
+    open: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.35,
+      },
+    },
   };
 
   return (

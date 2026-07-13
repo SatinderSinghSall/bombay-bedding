@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import {
   ArrowRight,
   MapPin,
@@ -11,7 +11,7 @@ import {
   Clock3,
 } from "lucide-react";
 
-const container = {
+const container: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -22,7 +22,7 @@ const container = {
   },
 };
 
-const item = {
+const item: Variants = {
   hidden: { opacity: 0, y: 24 },
   show: {
     opacity: 1,
@@ -38,7 +38,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-[#z-0 bg-[#faf9f7] pt-32 pb-20 sm:pt-40 lg:pt-48 lg:pb-28"
+      className="relative overflow-hidden bg-[#faf9f7] pt-32 pb-20 sm:pt-40 lg:pt-48 lg:pb-28"
     >
       {/* Editorial Sophisticated Ambient Blurs */}
       <div className="absolute top-0 left-1/4 h-[500px] w-[500px] rounded-full bg-stone-200/30 blur-[130px] pointer-events-none" />

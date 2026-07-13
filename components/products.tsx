@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Image from "next/image";
 import { MessageCircle, ArrowUpRight } from "lucide-react";
 
@@ -92,7 +92,7 @@ export function Products() {
     },
   ];
 
-  const container = {
+  const container: Variants = {
     hidden: {},
     show: {
       transition: {
@@ -101,7 +101,7 @@ export function Products() {
     },
   };
 
-  const item = {
+  const item: Variants = {
     hidden: {
       opacity: 0,
       y: 30,
@@ -111,7 +111,7 @@ export function Products() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.215, 0.61, 0.355, 1],
+        ease: [0.215, 0.61, 0.355, 1] as const,
       },
     },
   };
@@ -316,7 +316,10 @@ export function Products() {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: [0.215, 0.61, 0.355, 1] }}
+          transition={{
+            duration: 0.6,
+            ease: [0.215, 0.61, 0.355, 1] as const,
+          }}
           className="mt-24 mb-6 mx-auto max-w-7xl"
         >
           <div className="relative overflow-hidden rounded-2xl border border-amber-500/20 bg-amber-500/[0.02] p-5 backdrop-blur-md">

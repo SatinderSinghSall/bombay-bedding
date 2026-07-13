@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import {
   ArrowRight,
   Check,
@@ -10,7 +10,7 @@ import {
   HeartHandshake,
 } from "lucide-react";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: {
     opacity: 0,
     y: 40,
@@ -20,12 +20,12 @@ const fadeUp = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   },
 };
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: {
     transition: {

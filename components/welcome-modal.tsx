@@ -55,7 +55,10 @@ export function WelcomeModal() {
           initial={{ opacity: 0, scale: 0.97, y: 15 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.97, y: 15 }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          transition={{
+            duration: 0.5,
+            ease: [0.16, 1, 0.3, 1] as const,
+          }}
           className="relative w-full max-w-5xl bg-[#faf9f7] rounded-[28px] overflow-hidden border border-stone-200/80 shadow-[0_35px_80px_rgba(0,0,0,0.4)] grid md:grid-cols-[1.15fr_0.85fr] z-10 max-h-[85vh] md:max-h-[640px]"
         >
           {/* High-Contrast Visible Strict Close Button */}
