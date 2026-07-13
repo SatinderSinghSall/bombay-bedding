@@ -45,22 +45,50 @@ export function Hero() {
       <div className="absolute right-0 bottom-0 h-[400px] w-[400px] rounded-full bg-amber-100/20 blur-[120px] pointer-events-none" />
 
       <div className="mx-auto max-w-[1450px] px-4 sm:px-8 lg:px-12 w-full">
-        {/* ================= BIG & CENTERED LOGO ROW ================= */}
+        {/* ================= BIG & CENTERED LOGO ROW with EXPANDED SIDE LOGOS ================= */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full flex justify-center items-center mb-12 sm:mb-16 md:mb-20"
+          className="w-full flex justify-center items-center mb-12 sm:mb-16 md:mb-20 px-4"
         >
-          <div className="w-full max-w-[320px] sm:max-w-[480px] md:max-w-[600px] lg:max-w-[700px] px-4">
-            <Image
-              src="/logo.jpg"
-              alt="Bombay Bedding Banner Logo"
-              width={1200}
-              height={400}
-              priority
-              className="w-full h-auto object-contain rounded-xl shadow-md border border-stone-200/40"
-            />
+          {/* Expanded layout limits to fill up more horizontal space beautifully */}
+          <div className="w-full max-w-[500px] sm:max-w-[750px] md:max-w-[1000px] lg:max-w-[1200px] flex items-center justify-between gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+            {/* Left Logo - Scaled Up */}
+            <div className="flex-shrink-0">
+              <Image
+                src="/logo-left.jpeg"
+                alt="Bombay Bedding Left Logo"
+                width={160}
+                height={160}
+                priority
+                className="w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain rounded-full shadow-md border border-stone-200/40 bg-black"
+              />
+            </div>
+
+            {/* Main Center Logo - Spans larger across the center */}
+            <div className="flex-grow max-w-[350px] sm:max-w-[500px] md:max-w-[650px] lg:max-w-[750px] mx-auto">
+              <Image
+                src="/logo.jpg"
+                alt="Bombay Bedding Banner Logo"
+                width={1200}
+                height={400}
+                priority
+                className="w-full h-auto object-contain rounded-xl shadow-md border border-stone-200/40"
+              />
+            </div>
+
+            {/* Right Logo - Scaled Up */}
+            <div className="flex-shrink-0">
+              <Image
+                src="/logo-right.jpeg"
+                alt="Bombay Bedding Right Logo"
+                width={160}
+                height={160}
+                priority
+                className="w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain rounded-full shadow-md border border-stone-200/40 bg-black"
+              />
+            </div>
           </div>
         </motion.div>
 
