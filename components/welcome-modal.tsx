@@ -157,10 +157,10 @@ export function WelcomeModal() {
                   Direct Line
                 </span>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919333041911"
                   className="text-sm font-semibold text-stone-900 transition-colors hover:text-amber-700 inline-flex items-center gap-1.5 mt-0.5"
                 >
-                  <Phone size={13} className="text-stone-400" /> +91 98765 43210
+                  <Phone size={13} className="text-stone-400" /> +91 93330 41911
                 </a>
               </div>
 
