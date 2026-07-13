@@ -24,6 +24,7 @@ export default function Page() {
       <VisitUs />
       <Contact />
       <Footer />
+
       <FloatingCTA />
     </main>
   );

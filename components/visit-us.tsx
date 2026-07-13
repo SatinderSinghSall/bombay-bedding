@@ -74,6 +74,19 @@ export function VisitUs() {
           transition={{ duration: 0.7 }}
           className="mx-auto mb-20 max-w-3xl text-center"
         >
+          {/* ================= ADDED MATCHING UNIFIED HEADING BLOCK ================= */}
+          <div className="mb-12">
+            <p className="text-lg font-semibold uppercase tracking-[0.5em] text-neutral-900">
+              LOCATION
+            </p>
+
+            <h2 className="mt-3 text-5xl font-black tracking-tight text-neutral-900 sm:text-6xl md:text-7xl lg:text-8xl">
+              Visit Us
+            </h2>
+
+            <div className="mx-auto mt-6 h-[3px] w-24 rounded-full bg-amber-600" />
+          </div>
+
           {/* Badge */}
           <div className="inline-flex items-center gap-3 rounded-full border border-stone-300 bg-white/80 px-5 py-2 backdrop-blur-xl shadow-sm mb-12">
             <Navigation size={15} className="text-stone-700" />
@@ -83,11 +96,11 @@ export function VisitUs() {
           </div>
 
           {/* Heading */}
-          <h2 className="mt-8 text-5xl font-semibold tracking-[-0.04em] text-stone-900 sm:text-6xl">
+          <h3 className="mt-8 text-5xl font-semibold tracking-[-0.04em] text-stone-900 sm:text-6xl">
             Experience
             <br />
             Bombay Bedding
-          </h2>
+          </h3>
 
           {/* Paragraph */}
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-stone-600">
@@ -161,7 +174,7 @@ export function VisitUs() {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.755761913596!2d87.32117!3d23.84193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f720000000001%3A0x1234567890abcdef!2sDurgapur%20Station%20Road!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.1895930335016!2d87.31708207590823!3d23.495445798436573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f771737046a53f%3A0xddd88b1ac0902e84!2sBombay%20Bedding!5e0!3m2!1sen!2sin!4v1720881000000!5m2!1sen!2sin"
                 title="Bombay Bedding Location"
                 style={{ border: 0 }}
               />
@@ -313,10 +326,10 @@ export function VisitUs() {
             </div>
 
             <a
-              href="tel:+919876543210"
+              href="tel:+919333041911"
               className="mt-8 block text-3xl font-semibold tracking-tight text-stone-900 transition hover:text-stone-700"
             >
-              +91 98765 43210
+              +91 93330 41911
             </a>
             <p className="mt-3 text-stone-600">
               Call us for product enquiries, pricing or showroom assistance.
@@ -324,7 +337,7 @@ export function VisitUs() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919333041911"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
@@ -333,7 +346,7 @@ export function VisitUs() {
                 WhatsApp Us
               </a>
               <a
-                href="tel:+919876543210"
+                href="tel:+919333041911"
                 className="inline-flex items-center justify-center rounded-full border border-stone-300 px-6 py-3 text-sm font-semibold text-stone-900 transition-all duration-300 hover:border-stone-900 hover:bg-stone-100"
               >
                 Call Now

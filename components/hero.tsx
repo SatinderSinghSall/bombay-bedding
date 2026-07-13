@@ -45,6 +45,26 @@ export function Hero() {
       <div className="absolute right-0 bottom-0 h-[400px] w-[400px] rounded-full bg-amber-100/20 blur-[120px] pointer-events-none" />
 
       <div className="mx-auto max-w-[1450px] px-4 sm:px-8 lg:px-12 w-full">
+        {/* ================= BIG & CENTERED LOGO ROW ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="w-full flex justify-center items-center mb-12 sm:mb-16 md:mb-20"
+        >
+          <div className="w-full max-w-[320px] sm:max-w-[480px] md:max-w-[600px] lg:max-w-[700px] px-4">
+            <Image
+              src="/logo.jpg"
+              alt="Bombay Bedding Banner Logo"
+              width={1200}
+              height={400}
+              priority
+              className="w-full h-auto object-contain rounded-xl shadow-md border border-stone-200/40"
+            />
+          </div>
+        </motion.div>
+
+        {/* Existing Grid Layout Structure (Kept completely as-is) */}
         <div className="grid gap-12 lg:gap-8 lg:grid-cols-[1.05fr_.95fr] items-center">
           {/* ================= LEFT CONTENT COLUMN ================= */}
           <motion.div
@@ -90,7 +110,7 @@ export function Hero() {
               className="mt-8 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center"
             >
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919333041911"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-3 rounded-full bg-stone-950 px-7 py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-stone-850 hover:shadow-xl hover:-translate-y-0.5"
@@ -111,7 +131,7 @@ export function Hero() {
               </a>
             </motion.div>
 
-            {/* Structural Trust Banner (Not Absolute Boxed Elements) */}
+            {/* Structural Trust Banner */}
             <motion.div
               variants={item}
               className="mt-12 sm:mt-16 pt-8 border-t border-stone-200/80 grid gap-6 grid-cols-1 sm:grid-cols-3"
@@ -183,7 +203,6 @@ export function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/40 via-transparent to-transparent pointer-events-none" />
 
-              {/* Clean Minimal Text Tag Overlaid Directly inside Image layout */}
               <div className="absolute bottom-6 left-6 right-6 text-white backdrop-blur-md bg-stone-900/40 p-4 rounded-xl border border-white/10">
                 <p className="text-[10px] tracking-widest font-bold uppercase text-stone-200">
                   Featured Style
@@ -194,7 +213,7 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Right Mini Editorial Column (Creates high-end magazine layout while maintaining perfect responsiveness) */}
+            {/* Right Mini Editorial Column */}
             <div className="flex flex-row sm:flex-col gap-4 w-full sm:w-[180px] lg:w-[200px] shrink-0">
               <div className="relative rounded-2xl overflow-hidden flex-1 h-[140px] sm:h-full border border-stone-200 bg-white shadow-sm">
                 <Image

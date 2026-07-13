@@ -81,7 +81,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-stone-50/60 py-20 sm:py-28 lg:py-36 selection:bg-neutral-900 selection:text-white"
+      className="relative overflow-hidden bg-stone-50/60 py-20 sm:py-28 lg:py-36 selection:bg-neutral-900 selection:text-white border-t border-neutral-200"
     >
       {/* Structural Ambient Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -89,21 +89,36 @@ export function About() {
         <div className="absolute right-[-5%] bottom-[10%] h-[700px] w-[700px] rounded-full bg-orange-100/20 blur-[160px]" />
       </div>
 
-      <div className="mb-8 text-center">
-        <p className="text-lg font-semibold uppercase tracking-[0.5em] text-warm-accent text-neutral-900">
-          ABOUT
-        </p>
-
-        <h2 className="mt-3 text-5xl font-black tracking-tight text-neutral-900 sm:text-6xl md:text-7xl lg:text-8xl">
-          Bombay Bedding
-        </h2>
-
-        <div className="mx-auto mt-6 h-[3px] w-24 rounded-full bg-warm-accent" />
-      </div>
-
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        {/* ================= MAIN SECTION TITLE INDICATOR ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-8 flex flex-col items-center"
+        >
+          <h1 className="text-4xl font-display font-bold tracking-tight text-neutral-900 sm:text-5xl md:text-6xl lg:text-7xl">
+            About Us
+          </h1>
+          <div className="mt-5 h-[3px] w-28 bg-amber-600 rounded-full" />
+        </motion.div>
+
+        {/* ================= ADDED SUB-HEADING BLOCK ================= */}
+        <div className="mb-16 text-center">
+          <p className="text-lg font-semibold uppercase tracking-[0.5em] text-neutral-900">
+            ABOUT
+          </p>
+
+          <h2 className="mt-3 text-5xl font-black tracking-tight text-neutral-900 sm:text-6xl md:text-7xl lg:text-8xl">
+            Bombay Bedding
+          </h2>
+
+          <div className="mx-auto mt-6 h-[3px] w-24 rounded-full bg-amber-600" />
+        </div>
+
         {/* Editorial Section Header */}
-        <div className="max-w-3xl mb-20 lg:mb-28">
+        <div className="max-w-3xl mb-20 lg:mb-28 mx-auto text-center lg:text-left">
           <div className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50/60 px-4 py-1.5 text-xs font-semibold tracking-wider text-amber-800 uppercase backdrop-blur-sm">
             <Sparkles className="h-3.5 w-3.5 text-amber-600" />
             Heritage Since 1962
@@ -116,7 +131,7 @@ export function About() {
             </span>
           </h2>
 
-          <div className="mt-8 flex flex-col md:flex-row gap-6 md:gap-12 text-neutral-600 border-l-2 border-amber-600/30 pl-6">
+          <div className="mt-8 flex flex-col md:flex-row gap-6 md:gap-12 text-neutral-600 border-l-2 border-amber-600/30 pl-6 text-left">
             <p className="text-base leading-relaxed">
               For more than six decades, Bombay Bedding has been helping
               families shape warm, sophisticated environments. What began as a
@@ -303,7 +318,7 @@ export function About() {
               </a>
 
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919333041911"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2.5 rounded-full border border-neutral-300 bg-white px-8 py-4 text-sm font-semibold tracking-wide text-neutral-700 transition-all hover:bg-neutral-50 active:scale-98"
@@ -374,7 +389,7 @@ export function About() {
               </div>
 
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919333041911"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-amber-600 py-3 text-xs font-semibold uppercase tracking-wider text-white transition-all hover:bg-amber-700 shadow-md active:scale-99"

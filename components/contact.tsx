@@ -9,16 +9,16 @@ export function Contact() {
       icon: MessageCircle,
       title: "WhatsApp",
       description: "Direct instant chat with our concierge",
-      value: "+91 98765 43210",
-      link: "https://wa.me/919876543210",
+      value: "+91 93330 41911",
+      link: "https://wa.me/919333041911",
       color: "from-[#128C7E] to-[#075E54]", // Luxurious Deep Emerald/WhatsApp
     },
     {
       icon: Phone,
       title: "Phone Support",
       description: "Call our specialists for personal assistance",
-      value: "+91 98765 43210",
-      link: "tel:+919876543210",
+      value: "+91 93330 41911",
+      link: "tel:+919333041911",
       color: "from-[#1e3a8a] to-[#0f172a]", // Deep Imperial Blue & Slate
     },
     {
@@ -69,16 +69,27 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="text-center mb-16 md:mb-24 max-w-2xl mx-auto"
+          className="text-center mb-16 md:mb-24 max-w-3xl mx-auto"
         >
-          <span className="text-xs font-semibold tracking-widest text-neutral-400 uppercase block mb-3">
-            Get In Touch
-          </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif tracking-tight text-neutral-900 mb-6 font-light">
+          {/* ================= UNIFIED MAIN HEADING BLOCK ================= */}
+          <div className="mb-12">
+            <p className="text-lg font-semibold uppercase tracking-[0.5em] text-neutral-900">
+              GET IN TOUCH
+            </p>
+
+            <h2 className="mt-3 text-5xl font-black tracking-tight text-neutral-900 sm:text-6xl md:text-7xl lg:text-8xl">
+              Contact Us
+            </h2>
+
+            <div className="mx-auto mt-6 h-[3px] w-24 rounded-full bg-amber-600" />
+          </div>
+
+          {/* Subheading Style Content */}
+          <h3 className="text-3xl sm:text-4xl font-serif tracking-tight text-neutral-900 mb-6 font-light">
             Let&apos;s Talk <span className="italic font-normal">Fabrics</span>
-          </h2>
-          <div className="w-12 h-[1px] bg-neutral-400 mx-auto mb-6" />
-          <p className="text-base sm:text-lg text-neutral-600 font-light leading-relaxed">
+          </h3>
+
+          <p className="text-base sm:text-lg text-neutral-600 font-light leading-relaxed max-w-2xl mx-auto">
             Experience exceptional customer service. Reach out to us for luxury
             bespoke tailoring, product insights, or private inquiries.
           </p>

@@ -122,8 +122,21 @@ export function Products() {
       className="relative overflow-hidden bg-gradient-to-b from-white via-stone-50/40 to-white py-16 sm:py-24 lg:py-32 select-none border-t border-neutral-200"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        {/* Header */}
+        {/* ================= SECTION TITLE INDICATOR ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-16 sm:mb-24 flex flex-col items-center"
+        >
+          <h1 className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl md:text-6xl lg:text-7xl">
+            Our Products
+          </h1>
+          <div className="mt-5 h-[3px] w-28 bg-amber-600 rounded-full" />
+        </motion.div>
+
+        {/* Content Header Wrapper */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -183,7 +196,7 @@ export function Products() {
               </p>
 
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919333041911"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 sm:mt-8 inline-flex items-center gap-2.5 rounded-full bg-white px-5 py-3 text-xs sm:text-sm font-semibold text-neutral-900 shadow-lg transition duration-300 hover:bg-neutral-50 active:scale-98"
@@ -226,7 +239,7 @@ export function Products() {
               </p>
 
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919333041911"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 sm:mt-8 inline-flex items-center gap-2.5 rounded-full bg-white px-5 py-3 text-xs sm:text-sm font-semibold text-neutral-900 shadow-lg transition duration-300 hover:bg-neutral-50 active:scale-98"
@@ -291,7 +304,7 @@ export function Products() {
 
                 {/* Premium Micro-Interactive Action Row */}
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/919333041911"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between gap-2 rounded-xl bg-neutral-900 px-4 py-3 text-xs font-medium text-white transition-all duration-300 hover:bg-amber-800 shadow-sm active:scale-98"
@@ -375,7 +388,7 @@ export function Products() {
 
                 <div className="mt-6 sm:mt-8 flex flex-wrap gap-3">
                   <a
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/919333041911"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2.5 rounded-full bg-white px-5 sm:px-6 py-3 text-xs sm:text-sm font-semibold text-neutral-900 transition shadow-md hover:bg-neutral-50 active:scale-98"
@@ -394,7 +407,7 @@ export function Products() {
               <div className="grid grid-cols-2 gap-4 lg:col-span-5 w-full">
                 <div className="rounded-xl sm:rounded-2xl border border-white/5 bg-white/5 p-4 sm:p-6 backdrop-blur-sm">
                   <h4 className="font-serif text-3xl sm:text-4xl font-light text-white">
-                    25+
+                    64+
                   </h4>
                   <p className="mt-1 text-[11px] font-medium tracking-wide text-neutral-400 uppercase">
                     Years Experience

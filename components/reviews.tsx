@@ -74,20 +74,34 @@ export function Reviews() {
   return (
     <section
       id="reviews"
-      className="py-20 lg:py-28 bg-white border-t border-neutral-200"
+      className="py-16 sm:py-24 lg:py-32 bg-white border-t border-neutral-200"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {/* ================= SECTION TITLE INDICATOR ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-16 sm:mb-24 flex flex-col items-center"
+        >
+          <h1 className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl md:text-6xl lg:text-7xl">
+            Our Reviews
+          </h1>
+          <div className="mt-5 h-[3px] w-28 bg-amber-600 rounded-full" />
+        </motion.div>
+
+        {/* Header Content Wrapper */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-4xl mx-auto mb-16"
+          className="text-center max-w-4xl mx-auto mb-16 flex flex-col items-center"
         >
           {/* Small Badge */}
-          <div className="inline-flex items-center rounded-full border border-neutral-200 bg-neutral-50 px-4 py-1.5 mb-12">
-            <span className="text-xl font-semibold tracking-[0.25em] uppercase text-neutral-600">
+          <div className="inline-flex items-center rounded-full border border-neutral-200 bg-neutral-50 px-4 py-1.5 mb-8">
+            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-neutral-600">
               Customer Stories
             </span>
           </div>
@@ -101,7 +115,7 @@ export function Reviews() {
           </h2>
 
           {/* Paragraph */}
-          <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-neutral-600">
+          <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg leading-8 text-neutral-600">
             Every review reflects our commitment to premium quality, thoughtful
             craftsmanship, and exceptional customer service. Here's what our
             customers have to say about their Bombay Bedding experience.
@@ -143,23 +157,27 @@ export function Reviews() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               whileHover={{ y: -4 }}
-              className={`${getSize(review.size)} ${getRowHeight(review.size)} bg-gradient-to-br from-neutral-50 to-neutral-100 rounded-2xl p-6 shadow-premium hover:shadow-premium-lg transition-all border border-neutral-200 flex flex-col justify-between group`}
+              className={`${getSize(review.size)} ${getRowHeight(
+                review.size,
+              )} bg-gradient-to-br from-neutral-50 to-neutral-100 rounded-2xl p-6 shadow-premium hover:shadow-premium-lg transition-all border border-neutral-200 flex flex-col justify-between group relative`}
             >
-              {/* Rating */}
-              <div className="flex gap-1 mb-4">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    size={16}
-                    className="fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-              </div>
+              <div>
+                {/* Rating */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Star
+                      key={i}
+                      size={16}
+                      className="fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
+                </div>
 
-              {/* Review Text */}
-              <p className="text-neutral-700 leading-relaxed mb-6 text-sm flex-grow">
-                &quot;{review.text}&quot;
-              </p>
+                {/* Review Text */}
+                <p className="text-neutral-700 leading-relaxed mb-6 text-sm">
+                  &quot;{review.text}&quot;
+                </p>
+              </div>
 
               {/* Author */}
               <div className="border-t border-neutral-200 pt-4">

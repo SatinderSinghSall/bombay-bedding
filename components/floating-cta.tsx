@@ -34,7 +34,7 @@ export function FloatingCTA() {
             className="pointer-events-auto group relative"
           >
             <a
-              href="https://wa.me/919876543210?text=I%20would%20like%20to%20request%20your%20full%20catalogue"
+              href="https://wa.me/919333041911?text=I%20would%20like%20to%20request%20your%20full%20catalogue"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:from-amber-800 hover:to-amber-900 text-white font-sans text-xs sm:text-sm font-medium tracking-wider uppercase rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 border border-neutral-800/50"
@@ -58,7 +58,7 @@ export function FloatingCTA() {
             </span>
 
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919333041911"
               target="_blank"
               rel="noopener noreferrer"
               className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-teal-600 text-white rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 relative"

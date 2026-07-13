@@ -67,7 +67,7 @@ export function Footer() {
           <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
         </svg>
       ),
-      href: "https://wa.me/919876543210",
+      href: "https://wa.me/919333041911",
       label: "WhatsApp",
     },
   ];
@@ -161,10 +161,10 @@ export function Footer() {
                   Phone
                 </p>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919333041911"
                   className="group inline-flex items-center gap-1 text-amber-500 transition-colors duration-300 hover:text-amber-400 font-medium"
                 >
-                  +91 98765 43210
+                  +91 93330 41911
                   <ArrowUpRight
                     size={14}
                     className="opacity-0 transition-all duration-300 -translate-y-0.5 group-hover:opacity-100"

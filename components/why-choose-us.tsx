@@ -48,8 +48,22 @@ export function WhyChooseUs() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* ================= MAIN BIG H1 HEADING WITH UNDERLINE ================= */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-center mb-20 flex flex-col items-center"
+        >
+          <h1 className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl md:text-6xl lg:text-7xl">
+            Why Choose Us?
+          </h1>
+          {/* Premium Elegant Underline Accent */}
+          <div className="mt-5 h-[3px] w-28 bg-amber-600 rounded-full" />
+        </motion.div>
+
         {/* Premium Eyebrow Label Banner */}
-        {/* Unified Centered Main Heading Block */}
         <div className="mb-16 sm:mb-24 text-center flex flex-col items-center">
           {/* Premium Center Eyebrow Pill */}
           <motion.div
