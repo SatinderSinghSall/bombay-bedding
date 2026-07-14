@@ -20,7 +20,7 @@ export function WelcomeModal() {
     // 10 Second timed delay before triggering the modal
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 10000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
