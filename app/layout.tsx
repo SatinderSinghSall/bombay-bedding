@@ -5,11 +5,12 @@ import "./globals.css";
 // 1. Optimized Global Metadata with Favicon Configuration
 export const metadata: Metadata = {
   title: {
-    default: "Bombay Bedding | Premium Furnishings Showroom in Durgapur",
+    default:
+      "Bombay Bedding | Curtains, Bedsheets & Home Furnishings in Durgapur Since 1962 - Bombay Bedding | Premium Furnishings Showroom in Durgapur",
     template: "%s | Bombay Bedding Durgapur",
   },
   description:
-    "Discover premium bed sheets, ready-made curtains, luxury mattresses, comforters, and home styling transformations at Bombay Bedding. Serving Durgapur's luxury home decor needs since 1962. Visit our Station Road showroom!",
+    "Bombay Bedding has been Durgapur's trusted home furnishing showroom since 1962. Explore premium curtain fabrics, ready-made curtains, bedsheets, blankets, comforters, pillows, sofa covers, towels and more at honest prices. Discover premium bed sheets, ready-made curtains, luxury mattresses, comforters, and home styling transformations at Bombay Bedding. Serving Durgapur's luxury home decor needs since 1962. Visit our Station Road showroom!",
 
   icons: {
     icon: [
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     "home decor store Durgapur",
     "pillows and comforters",
   ],
-  metadataBase: new URL("https://www.bombaybedding.com"), // Change to your live production domain
+  metadataBase: new URL("http://bombay-bedding.vercel.app"), // Change to your live production domain
   alternates: {
     canonical: "/",
   },
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     title: "Bombay Bedding - Premium Luxury Home Furnishings",
     description:
       "For over six decades, Durgapur's trusted destination for luxury, comfort, and premium home styling transformations. Explore our curated collections today.",
-    url: "https://www.bombaybedding.com", // Change to your live production domain
+    url: "http://bombay-bedding.vercel.app", // Change to your live production domain
     siteName: "Bombay Bedding",
     locale: "en_IN",
     type: "website",
@@ -62,9 +63,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  // verification: {
-  //   google: "your-google-search-console-token-here", // Paste your Google Webmaster tool token here
-  // },
+  verification: {
+    google: "CLiuOeX7kVXX7mFQV5wksvIW0EorAvp-yr8K4co_IhE",
+  },
 };
 
 // 2. Next.js Managed Viewport Config
@@ -89,8 +90,8 @@ export default function RootLayout({
     name: "Bombay Bedding",
     image: "https://www.bombaybedding.com/og-image.jpg", // Change to your absolute domain image path
     "@id": "https://www.bombaybedding.com/#store",
-    url: "https://www.bombaybedding.com",
-    telephone: "+919876543210", // Change to your explicit phone number
+    url: "http://bombay-bedding.vercel.app",
+    telephone: "+919333041911",
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
