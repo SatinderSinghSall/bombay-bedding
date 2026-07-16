@@ -176,10 +176,10 @@ export function Footer() {
                   Email
                 </p>
                 <a
-                  href="mailto:info@bombaybed.com"
+                  href="mailto:bombaybedding16@gmail.com"
                   className="group inline-flex items-center gap-1 text-amber-500 transition-colors duration-300 hover:text-amber-400 font-medium"
                 >
-                  info@bombaybed.com
+                  bombaybedding16@gmail.com
                   <ArrowUpRight
                     size={14}
                     className="opacity-0 transition-all duration-300 -translate-y-0.5 group-hover:opacity-100"
@@ -190,16 +190,22 @@ export function Footer() {
                 <p className="text-[10px] uppercase tracking-wider text-neutral-500 font-bold mb-1.5">
                   Hours
                 </p>
-                <div className="text-neutral-300 space-y-1 text-xs">
+                <div className="text-neutral-300 space-y-1.5 text-xs">
                   <p>
                     <span className="text-neutral-500 font-normal">
-                      Mon-Sat:
+                      Mon - Wed:
                     </span>{" "}
-                    10 AM - 8 PM
+                    9:30 AM - 9:30 PM
                   </p>
                   <p>
-                    <span className="text-neutral-500 font-normal">Sun:</span>{" "}
-                    11 AM - 7 PM
+                    <span className="text-neutral-500 font-normal">Thu:</span>{" "}
+                    <span className="text-red-500 font-medium">Closed</span>
+                  </p>
+                  <p>
+                    <span className="text-neutral-500 font-normal">
+                      Fri - Sun:
+                    </span>{" "}
+                    9:30 AM - 9:30 PM
                   </p>
                 </div>
               </div>

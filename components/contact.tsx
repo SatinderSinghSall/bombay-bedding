@@ -25,8 +25,8 @@ export function Contact() {
       icon: Mail,
       title: "Email Inquiry",
       description: "For bespoke orders and partnerships",
-      value: "info@bombaybed.com",
-      link: "mailto:info@bombaybed.com",
+      value: "bombaybedding16@gmail.com",
+      link: "mailto:bombaybedding16@gmail.com",
       color: "from-[#b45309] to-[#78350f]", // Warm Amber / Rose Gold Accent
     },
   ];
@@ -176,9 +176,10 @@ export function Contact() {
                   during business operations
                 </span>
               </p>
-              <p className="text-neutral-500 text-xs mt-1">
-                Mon - Sun, 10:00 AM - 8:00 PM IST
-              </p>
+              <div className="text-neutral-500 text-xs mt-1.5 space-y-0.5">
+                <p>Fri - Wed: 9:30 AM - 9:30 PM IST</p>
+                <p className="text-red-600 font-medium">Thursday: Closed</p>
+              </div>
             </div>
 
             {/* Assurance Info */}

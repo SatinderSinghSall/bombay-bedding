@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatePresence, motion, type Variants } from "framer-motion";
 import {
   Menu,
@@ -80,8 +81,8 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-3 px-3 sm:top-5 z-50 transition-all duration-300 select-none">
-      {/* Expanded Max-Width container exclusively for large screens */}
-      <div className="mx-auto max-w-7xl lg:max-w-[92%] px-0 sm:px-6 lg:px-8 transition-all duration-300">
+      {/* Expanded Max-Width container with fluid layouts across all breakpoints */}
+      <div className="mx-auto max-w-7xl xl:max-w-[94%] px-0 sm:px-4 md:px-6 transition-all duration-300">
         <motion.nav
           animate={{
             height: isScrolled ? 72 : 80,
@@ -90,52 +91,71 @@ export function Header() {
           transition={{ duration: 0.4, ease: [0.215, 0.61, 0.355, 1] }}
           className={`
             flex items-center justify-between
-            border border-stone-200/60 lg:border-stone-300/60
+            border border-stone-200/60 xl:border-stone-300/60
             bg-white/90 lg:bg-stone-50/80 backdrop-blur-xl lg:backdrop-blur-md
-            px-4 sm:px-6 lg:px-10
+            px-4 sm:px-5 md:px-6 xl:px-8
             shadow-[0_8px_30px_rgb(0,0,0,0.04)]
             transition-all duration-300
           `}
         >
           {/* BRANDING LOGO */}
-          <Link href="/" className="flex items-center gap-3 sm:gap-4 group">
+          <Link
+            href="/"
+            className="flex items-center gap-2 sm:gap-3 group shrink-0"
+          >
+            {/* 1. Brand Logo Image */}
+            <div className="relative h-10 w-10 sm:h-11 sm:w-11 overflow-hidden rounded-xl bg-transparent transition-transform duration-300 group-hover:scale-[1.03]">
+              <Image
+                src="/logo-left.jpeg"
+                alt="Bombay Bedding Logo"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 40px, 44px"
+                priority
+              />
+            </div>
+
+            {/* 2. Original 'B' Icon Box */}
             <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl bg-neutral-900 text-white shadow-md transition-all duration-300 group-hover:scale-[1.03] group-hover:bg-amber-800">
               <span className="font-serif text-base sm:text-lg font-bold tracking-wide">
                 B
               </span>
             </div>
-            <div>
-              <h1 className="font-serif text-sm sm:text-base lg:text-lg font-medium tracking-tight text-neutral-900 transition-colors duration-300 group-hover:text-amber-900">
+
+            {/* 3. Brand Text Details */}
+            <div className="flex flex-col justify-center">
+              <h1 className="font-serif text-xs sm:text-sm md:text-base xl:text-lg font-medium tracking-tight text-neutral-900 transition-colors duration-300 group-hover:text-amber-900 leading-tight">
                 Bombay Bedding
               </h1>
-              <p className="hidden sm:block text-[8.5px] uppercase tracking-[0.32em] font-bold text-stone-400 mt-0.5">
+              {/* Visible on mid-to-large screens onwards safely */}
+              <p className="hidden md:block text-[7.5px] sm:text-[8.5px] uppercase tracking-[0.22em] sm:tracking-[0.32em] font-bold text-stone-400 mt-0.5 whitespace-nowrap">
                 Exclusive Furnishing Showroom
               </p>
             </div>
           </Link>
 
-          {/* DESKTOP NAVIGATION — Unchanged */}
-          <div className="hidden lg:flex items-center gap-1 rounded-full border border-stone-300/50 bg-stone-200/30 p-1.5 backdrop-blur-md">
+          {/* DESKTOP NAVIGATION — Changed breakpoint to lg:flex to avoid mid-screen crunching */}
+          <div className="hidden lg:flex items-center gap-0.5 xl:gap-1 rounded-full border border-stone-300/50 bg-stone-200/30 p-1.5 backdrop-blur-md mx-2 max-w-full">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="group relative rounded-full px-5 py-2 text-[11px] font-bold uppercase tracking-widest text-stone-600 transition-all duration-300 hover:text-neutral-950"
+                className="group relative rounded-full px-3 py-2 xl:px-5 text-[10px] xl:text-[11px] font-bold uppercase tracking-wider xl:tracking-widest text-stone-600 transition-all duration-300 hover:text-neutral-950 whitespace-nowrap"
               >
                 {item.label}
-                <span className="absolute left-5 right-5 bottom-1 h-[2px] w-0 rounded-full bg-amber-800 transition-all duration-300 group-hover:w-[calc(100%-40px)]" />
+                <span className="absolute left-3 right-3 xl:left-5 xl:right-5 bottom-1 h-[2px] w-0 rounded-full bg-amber-800 transition-all duration-300 group-hover:w-[calc(100%-24px)] xl:group-hover:w-[calc(100%-40px)]" />
               </a>
             ))}
           </div>
 
           {/* ACTIONS HUB */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Desktop Call To Action — Unchanged */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            {/* Desktop Call To Action */}
             <a
               href="https://wa.me/919333041911"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex items-center gap-2.5 rounded-full bg-neutral-900 px-6 py-3 text-xs font-bold uppercase tracking-widest text-white shadow-sm hover:bg-neutral-800 hover:shadow-md active:scale-98 transition-all duration-300"
+              className="hidden sm:flex items-center gap-2 rounded-full bg-neutral-900 px-4 py-2.5 md:px-5 md:py-3 xl:px-6 text-[11px] xl:text-xs font-bold uppercase tracking-wider xl:tracking-widest text-white shadow-sm hover:bg-neutral-800 hover:shadow-md active:scale-98 transition-all duration-300"
             >
               <MessageCircle
                 size={14}
@@ -144,7 +164,7 @@ export function Header() {
               <span>Concierge</span>
             </a>
 
-            {/* Mobile Actions — Enhanced with high-premium round contours */}
+            {/* Mobile Actions Button */}
             <a
               href="https://wa.me/919333041911"
               target="_blank"
@@ -155,6 +175,7 @@ export function Header() {
               <MessageCircle size={15} />
             </a>
 
+            {/* Hamburger Button visible across Mobile & Tablet views (hidden lg) */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="flex h-9 w-9 items-center justify-center rounded-full border border-stone-200 bg-stone-50 text-neutral-800 shadow-sm transition-colors hover:bg-stone-100 lg:hidden"
@@ -165,7 +186,7 @@ export function Header() {
           </div>
         </motion.nav>
 
-        {/* IMMERSIVE MOBILE MENU OVERLAY — Significantly upgraded visual architecture */}
+        {/* IMMERSIVE MOBILE & TABLET MENU OVERLAY */}
         <AnimatePresence>
           {mobileOpen && (
             <motion.div
@@ -201,12 +222,12 @@ export function Header() {
                 </nav>
               </div>
 
-              {/* Showroom Footer Area — Premium clean card integration */}
+              {/* Showroom Footer Area */}
               <motion.div
                 variants={itemVariants}
                 className="p-5 bg-stone-50 border-t border-stone-100 space-y-3.5"
               >
-                <div className="grid grid-cols-1 gap-2.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   <div className="flex items-center gap-3 bg-white p-3 rounded-xl border border-stone-200/40 shadow-[0_2px_8px_rgba(0,0,0,0.01)]">
                     <div className="p-2 bg-stone-50 rounded-lg text-amber-800 shrink-0">
                       <MapPin size={15} />

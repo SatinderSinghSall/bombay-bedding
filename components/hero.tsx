@@ -52,9 +52,8 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-full flex justify-center items-center mb-12 sm:mb-16 md:mb-20 px-4"
         >
-          {/* Expanded layout limits to fill up more horizontal space beautifully */}
           <div className="w-full max-w-[500px] sm:max-w-[750px] md:max-w-[1000px] lg:max-w-[1200px] flex items-center justify-between gap-4 sm:gap-6 md:gap-8 lg:gap-12">
-            {/* Left Logo - Scaled Up */}
+            {/* Left Logo */}
             <div className="flex-shrink-0">
               <Image
                 src="/logo-left.jpeg"
@@ -66,7 +65,7 @@ export function Hero() {
               />
             </div>
 
-            {/* Main Center Logo - Spans larger across the center */}
+            {/* Main Center Logo */}
             <div className="flex-grow max-w-[350px] sm:max-w-[500px] md:max-w-[650px] lg:max-w-[750px] mx-auto">
               <Image
                 src="/logo.jpg"
@@ -78,7 +77,7 @@ export function Hero() {
               />
             </div>
 
-            {/* Right Logo - Scaled Up */}
+            {/* Right Logo */}
             <div className="flex-shrink-0">
               <Image
                 src="/logo-right.jpeg"
@@ -92,7 +91,6 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* Existing Grid Layout Structure (Kept completely as-is) */}
         <div className="grid gap-12 lg:gap-8 lg:grid-cols-[1.05fr_.95fr] items-center">
           {/* ================= LEFT CONTENT COLUMN ================= */}
           <motion.div
@@ -111,7 +109,7 @@ export function Hero() {
               </div>
             </motion.div>
 
-            {/* High-End Clean Typography Heading */}
+            {/* Typography Heading */}
             <motion.div variants={item} className="mt-6 sm:mt-8">
               <h1 className="text-4xl font-semibold tracking-[-0.04em] text-stone-950 sm:text-6xl xl:text-7xl !leading-[1.1]">
                 Luxury Furnishings
@@ -132,7 +130,7 @@ export function Hero() {
               with ultimate physical comfort.
             </motion.p>
 
-            {/* Clear Action-Oriented Premium Buttons */}
+            {/* Premium Buttons */}
             <motion.div
               variants={item}
               className="mt-8 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center"
@@ -178,16 +176,20 @@ export function Hero() {
                 </div>
               </div>
 
+              {/* UPDATED: Store Hours & Thursday Closing Status */}
               <div className="flex gap-3.5 items-start">
                 <div className="p-2 bg-white rounded-xl border border-stone-200/60 shadow-sm text-stone-800">
                   <Clock3 size={18} />
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-stone-900">
-                    Open Daily
+                    Store Hours
                   </h4>
                   <p className="text-xs text-stone-500 mt-0.5 leading-normal">
-                    Visit anytime from 10:00 AM – 8:00 PM.
+                    9:30 AM – 9:30 PM{" "}
+                    <span className="block font-medium text-amber-800 mt-0.5">
+                      (Closed Thursday)
+                    </span>
                   </p>
                 </div>
               </div>

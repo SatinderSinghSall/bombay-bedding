@@ -37,23 +37,22 @@ const item: Variants = {
 export function VisitUs() {
   const [currentDayIndex, setCurrentDayIndex] = useState<number | null>(null);
 
-  // Safely grab the current system day index on the client side
   useEffect(() => {
-    // JavaScript gets Sunday as 0, Monday as 1... Saturday as 6
-    // We adjust it to match our array layout (Monday = 0, Sunday = 6)
     const jsDay = new Date().getDay();
+    // JavaScript gets Sunday as 0, Monday as 1... Saturday as 6
+    // Layout alignment mapping: Mon=0, Tue=1, Wed=2, Thu=3, Fri=4, Sat=5, Sun=6
     const adjustedDay = jsDay === 0 ? 6 : jsDay - 1;
     setCurrentDayIndex(adjustedDay);
   }, []);
 
   const detailedHours = [
-    { name: "Monday", hours: "10:00 AM – 8:00 PM" },
-    { name: "Tuesday", hours: "10:00 AM – 8:00 PM" },
-    { name: "Wednesday", hours: "10:00 AM – 8:00 PM" },
-    { name: "Thursday", hours: "10:00 AM – 8:00 PM" },
-    { name: "Friday", hours: "10:00 AM – 8:00 PM" },
-    { name: "Saturday", hours: "10:00 AM – 8:00 PM" },
-    { name: "Sunday", hours: "11:00 AM – 7:00 PM" },
+    { name: "Monday", hours: "9:30 AM – 9:30 PM" },
+    { name: "Tuesday", hours: "9:30 AM – 9:30 PM" },
+    { name: "Wednesday", hours: "9:30 AM – 9:30 PM" },
+    { name: "Thursday", hours: "Closed" }, // <-- Updated to Closed
+    { name: "Friday", hours: "9:30 AM – 9:30 PM" },
+    { name: "Saturday", hours: "9:30 AM – 9:30 PM" },
+    { name: "Sunday", hours: "9:30 AM – 9:30 PM" },
   ];
 
   return (
@@ -61,7 +60,7 @@ export function VisitUs() {
       id="visit"
       className="relative overflow-hidden bg-[#faf9f7] py-24 lg:py-32 border-t border-neutral-200"
     >
-      {/* Background Blur */}
+      {/* Background Blur Layers */}
       <div className="absolute left-0 top-32 h-80 w-80 rounded-full bg-stone-200/40 blur-[120px]" />
       <div className="absolute right-0 bottom-20 h-96 w-96 rounded-full bg-amber-100/30 blur-[150px]" />
 
@@ -74,20 +73,16 @@ export function VisitUs() {
           transition={{ duration: 0.7 }}
           className="mx-auto mb-20 max-w-3xl text-center"
         >
-          {/* ================= ADDED MATCHING UNIFIED HEADING BLOCK ================= */}
           <div className="mb-12">
             <p className="text-lg font-semibold uppercase tracking-[0.5em] text-neutral-900">
               LOCATION
             </p>
-
             <h2 className="mt-3 text-5xl font-black tracking-tight text-neutral-900 sm:text-6xl md:text-7xl lg:text-8xl">
               Visit Us
             </h2>
-
             <div className="mx-auto mt-6 h-[3px] w-24 rounded-full bg-amber-600" />
           </div>
 
-          {/* Badge */}
           <div className="inline-flex items-center gap-3 rounded-full border border-stone-300 bg-white/80 px-5 py-2 backdrop-blur-xl shadow-sm mb-12">
             <Navigation size={15} className="text-stone-700" />
             <span className="text-xl font-semibold uppercase tracking-[0.28em] text-stone-600">
@@ -95,14 +90,12 @@ export function VisitUs() {
             </span>
           </div>
 
-          {/* Heading */}
           <h3 className="mt-8 text-5xl font-semibold tracking-[-0.04em] text-stone-900 sm:text-6xl">
             Experience
             <br />
             Bombay Bedding
           </h3>
 
-          {/* Paragraph */}
           <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-stone-600">
             Step into our showroom and discover thoughtfully curated furnishings
             crafted for comfort, elegance and timeless living. Explore premium
@@ -110,11 +103,10 @@ export function VisitUs() {
             you find the perfect pieces for your home.
           </p>
 
-          {/* Stats */}
           <div className="mt-12 grid grid-cols-3 gap-8 border-t border-stone-200 pt-8">
             <div>
               <h3 className="text-3xl font-semibold tracking-tight text-stone-900">
-                15+
+                65+
               </h3>
               <p className="mt-2 text-xs uppercase tracking-[0.2em] text-stone-500">
                 Years
@@ -130,7 +122,7 @@ export function VisitUs() {
             </div>
             <div>
               <h3 className="text-3xl font-semibold tracking-tight text-stone-900">
-                7
+                6
               </h3>
               <p className="mt-2 text-xs uppercase tracking-[0.2em] text-stone-500">
                 Days Open
@@ -181,7 +173,7 @@ export function VisitUs() {
             </div>
           </motion.div>
 
-          {/* ================= RIGHT SIDE ================= */}
+          {/* ================= RIGHT SIDE PANELS ================= */}
           <motion.div variants={container} className="flex flex-col gap-6">
             {/* ================= ADDRESS ================= */}
             <motion.div
@@ -220,7 +212,7 @@ export function VisitUs() {
               </a>
             </motion.div>
 
-            {/* ================= NEW PREMIUM HOURS PANEL ================= */}
+            {/* ================= BUSINESS SCHEDULE HOURS ================= */}
             <motion.div
               variants={item}
               whileHover={{ y: -5 }}
@@ -252,7 +244,7 @@ export function VisitUs() {
                           : "text-stone-600 hover:bg-stone-50/50"
                       }`}
                     >
-                      {/* Active Day Highlighting Capsule */}
+                      {/* Active Day Background Capsule */}
                       {isToday && (
                         <motion.div
                           layoutId="activeDayBackground"
@@ -277,7 +269,13 @@ export function VisitUs() {
                       </div>
 
                       <span
-                        className={`text-sm ${isToday ? "text-stone-900 font-semibold" : "text-stone-500 font-normal"}`}
+                        className={`text-sm ${
+                          isToday
+                            ? "text-stone-900 font-semibold"
+                            : dayData.hours === "Closed"
+                              ? "text-red-500 font-medium"
+                              : "text-stone-500 font-normal"
+                        }`}
                       >
                         {dayData.hours}
                       </span>
@@ -297,7 +295,7 @@ export function VisitUs() {
           </motion.div>
         </motion.div>
 
-        {/* ================= BOTTOM ROW: CONTACT & WHY VISIT US ================= */}
+        {/* ================= BOTTOM ROW PANEL ================= */}
         <motion.div
           variants={container}
           initial="hidden"
@@ -305,7 +303,7 @@ export function VisitUs() {
           viewport={{ once: true }}
           className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8"
         >
-          {/* CONTACT CARD */}
+          {/* CONTACT INFO CARD */}
           <motion.div
             variants={item}
             whileHover={{ y: -5 }}
@@ -354,7 +352,7 @@ export function VisitUs() {
             </div>
           </motion.div>
 
-          {/* WHY VISIT US CARD */}
+          {/* WHY CHOOSE US INFORMATION CARD */}
           <motion.div
             variants={item}
             className="overflow-hidden rounded-[30px] bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 p-8 text-white shadow-[0_30px_80px_rgba(0,0,0,.18)]"
@@ -375,7 +373,7 @@ export function VisitUs() {
 
             <div className="mt-8 grid grid-cols-3 gap-6 border-t border-white/10 pt-6">
               <div>
-                <h4 className="text-2xl font-semibold">15+</h4>
+                <h4 className="text-2xl font-semibold">65+</h4>
                 <p className="mt-1 text-xs uppercase tracking-[0.15em] text-white/50">
                   Years
                 </p>

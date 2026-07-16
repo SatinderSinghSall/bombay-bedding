@@ -16,71 +16,61 @@ export function Products() {
     {
       name: "Bed Covers",
       bengali: "বেড কভার",
-      image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      image: "/products/bed-cover.jpg",
       description: "Luxury quilted bed covers for elegant bedrooms.",
     },
     {
       name: "Curtains",
       bengali: "পর্দা",
-      image:
-        "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
+      image: "/products/curtains.jpg",
       description: "Designer curtains to transform every living space.",
     },
     {
       name: "Curtain Fabric",
       bengali: "পর্দার কাপড়",
-      image:
-        "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+      image: "/products/curtains-fabric.jpg",
       description: "Premium curtain fabrics in modern textures & colours.",
     },
     {
       name: "Towels",
       bengali: "তোয়ালে",
-      image:
-        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
+      image: "/products/towels.jpg",
       description: "Soft absorbent towels crafted for everyday luxury.",
     },
     {
       name: "Pillows",
       bengali: "বালিশ",
-      image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      image: "/products/pillows.jpg",
       description: "Comfortable pillows for a restful night's sleep.",
     },
     {
       name: "Cushions",
       bengali: "কুশন",
-      image:
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+      image: "/products/cushions.jpg",
       description: "Decorative cushions that add warmth and elegance.",
     },
     {
       name: "Blankets",
       bengali: "কম্বল",
-      image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      image: "/products/blankets.jpg",
       description: "Warm premium blankets for every season.",
     },
     {
       name: "Quilts",
       bengali: "কাঁথা",
-      image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      image: "/products/quilts.jpg",
       description: "Beautiful quilts with timeless craftsmanship.",
     },
     {
       name: "Mattresses",
       bengali: "ম্যাট্রেস",
-      image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      image: "/products/mattresses.jpg",
       description: "Premium mattresses designed for superior comfort.",
     },
     {
       name: "Door Mats",
       bengali: "ডোর ম্যাট",
-      image:
-        "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
+      image: "/products/door-mats.jpg",
       description: "Stylish entrance mats that welcome every guest.",
     },
     {

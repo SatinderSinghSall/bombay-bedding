@@ -17,7 +17,6 @@ export function WelcomeModal() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // 10 Second timed delay before triggering the modal
     const timer = setTimeout(() => {
       setIsOpen(true);
     }, 5000);
@@ -125,12 +124,17 @@ export function WelcomeModal() {
                     <h4 className="text-xs font-bold uppercase tracking-wider text-stone-900 leading-none">
                       Showroom Hours
                     </h4>
-                    <p className="text-xs sm:text-sm text-stone-500 font-light mt-1">
-                      Open Daily:{" "}
-                      <span className="font-medium text-stone-800">
-                        10:00 AM – 8:00 PM
-                      </span>
-                    </p>
+                    <div className="text-xs sm:text-sm text-stone-500 font-light mt-1.5 space-y-0.5">
+                      <p>
+                        Fri - Wed:{" "}
+                        <span className="font-medium text-stone-800">
+                          9:30 AM – 9:30 PM
+                        </span>
+                      </p>
+                      <p className="text-red-600 font-medium">
+                        Thursday: Closed
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -180,7 +184,7 @@ export function WelcomeModal() {
           {/* ================= RIGHT SECTION: EDITORIAL IMAGE ================= */}
           <div className="relative hidden md:block w-full h-full bg-stone-200">
             <Image
-              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?fit=crop&w=800&q=90"
+              src="/model-image.jpg"
               alt="Bombay Bedding Premium Luxury Showroom Setup"
               fill
               priority

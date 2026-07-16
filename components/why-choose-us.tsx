@@ -126,7 +126,7 @@ export function WhyChooseUs() {
               className="absolute -bottom-6 left-6 sm:left-10 rounded-[20px] sm:rounded-[28px] border border-neutral-200/50 bg-white/95 px-8 py-6 sm:px-10 sm:py-8 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.08)] backdrop-blur-md"
             >
               <h3 className="font-serif text-5xl sm:text-6xl font-light leading-none tracking-tight text-neutral-900">
-                15
+                64
                 <span className="text-amber-600 font-sans font-normal">+</span>
               </h3>
               <p className="mt-3 text-[10px] sm:text-xs font-bold uppercase tracking-[0.35em] text-stone-400">
@@ -209,7 +209,7 @@ export function WhyChooseUs() {
               {[
                 "Bed Sheets",
                 "Curtains",
-                "Mattresses",
+                "Linen",
                 "Quilts",
                 "Blankets",
                 "Towels",
@@ -267,7 +267,7 @@ export function WhyChooseUs() {
         >
           {[
             {
-              number: "15+",
+              number: "64+",
               label: "Years of Experience",
             },
             {
